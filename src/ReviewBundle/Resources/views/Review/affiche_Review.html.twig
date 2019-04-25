@@ -1,0 +1,70 @@
+{% extends "Dashboard/Employer/dashboard_layout.html.twig" %}
+
+
+{% block content %}
+
+    <!-- Dashboard Headline -->
+    <div class="dashboard-headline">
+        <h3>Reviews </h3><br>
+
+        <!-- Breadcrumbs -->
+        <nav id="breadcrumbs" class="dark">
+            <ul>
+                <li><a href="#">Home</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                <li>Reviews</li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Row -->
+    <div class="row">
+        <!-- Dashboard Box -->
+        <!-- <div class="col-xl-6"> -->
+        <div class="dashboard-box margin-top-0">
+
+            <!-- Headline -->
+            <div class="headline">
+                <h3><i class="icon-material-outline-face"></i> Rate Freelancers</h3>
+                <br>
+                <a href="{{ path('add_Review') }}" class="button ripple-effect margin-top-5 margin-bottom-10">
+                    <i class="icon-material-outline-thumb-up"></i> Leave a Review</a>
+            </div>
+<ul class="boxed-list-ul">
+
+                {% for r in review %}
+<li>
+            <div>
+                    <div class="boxed-list-item">
+                        <!-- Content -->
+                        <div class="item-content">
+                            <h3> {{ r.projectId.projectName }}</h3>
+                            <div>finished by {{ r.freelancerReviewedId.firstName }} {{ r.freelancerReviewedId.lastName }}</div>
+                            <div class="item-details margin-top-10">
+                                <div class="star-rating" data-rating="{{ r.rating }}"> </div>
+
+                            </div>
+                                <div> {{ r.comment|raw }} </div>
+                        </div>
+                    </div>
+                    <a href="{{ path('update_Review',{'id' :r.id}) }}"
+                       class="button gray ripple-effect ico" data-tippy-placement="top" data-original-title="Update">
+                            <i class="icon-feather-edit"></i></a>
+                    <a href="{{ path('delete_Review',{'id' :r.id}) }}" class="button gray ripple-effect ico" data-tippy-placement="top" data-original-title="Delete">
+                        <i class="icon-feather-trash-2"></i></a>
+
+            </div>
+
+                    </li>
+                    <br>
+                    <br>
+                {% endfor %}
+            </ul>
+
+
+
+        </div>
+    </div>
+
+
+    <!-- Row / End -->{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "Dashboard/Freelancer/dashboard_layout.html.twig" %}
+
+{% block content %}
+<!-- Leave a Review for Freelancer Popup
+================================================== -->
+
+                    <h3>Leave a Review</h3>
+<!--                    <span>Rate <a href="#">Peter Valentín</a> for the project </span> -->
+
+                {{ form_start (form) }}
+<br>
+                {{ form_label(form.projectId, 'Project Name:') }}
+                {{ form_widget(form.projectId) }}
+<br>
+                {{ form_label(form.employerReviewedId, 'Employer Company Name:') }}
+                {{ form_widget(form.employerReviewedId) }}
+<br>
+
+                {{ form_label(form.rating, 'Rating:') }}
+                {{ form_widget(form.rating) }}
+<br>
+
+                {{ form_label(form.comment, 'Comment:') }}
+                {{ form_widget(form.comment) }}
+<br>
+
+    <input type="submit" value="Save Review">
+                {{ form_end (form) }}
+
+
+
+
+{% endblock %}

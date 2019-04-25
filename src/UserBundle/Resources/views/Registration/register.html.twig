@@ -1,0 +1,24 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <div class="margin-top-70"></div>
+    <!-- Page Content
+    ================================================== -->
+<div class="container">
+    <div class="row">
+        <div class="col-xl-5 offset-xl-3">
+
+{% include "@FOSUser/Registration/register_content.html.twig" %}
+                <!-- Social Login -->
+                <div class="social-login-separator"><span>or</span></div>
+                <div class="social-login-buttons">
+                    <button class="google-login ripple-effect"><i class="icon-brand-google-plus-g"></i> Log In via Google+</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock  %}

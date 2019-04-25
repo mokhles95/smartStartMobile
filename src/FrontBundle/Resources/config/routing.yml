@@ -1,0 +1,29 @@
+employer_home:
+    path:     /home
+    defaults: { _controller: FrontBundle:Pages:employerHome }
+
+
+freelancer_home:
+    path:     /welcome
+    defaults: { _controller: FrontBundle:Pages:freelancerHome }
+
+find_freelancer:
+    path:     /search/freelancers
+    defaults: { _controller: FrontBundle:Pages:findFreelancer}
+
+freelancer_profile:
+    path:     /freelancer/{id}
+    defaults: { _controller: FrontBundle:Pages:freelancerProfile}
+
+find_employer:
+    path:     /search/companies
+    defaults: { _controller: FrontBundle:Pages:findCompany}
+
+company_profile:
+    path:     /search/companies/{id?}
+    defaults: { _controller: FrontBundle:Pages:companyProfile}
+
+
+
+
+

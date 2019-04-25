@@ -1,0 +1,4 @@
+freelancer_bookmarks:
+    path:     /bookmarks
+    defaults: { _controller: BookmarkBundle:Bookmark:freelancerBookmarks }
+

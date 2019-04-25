@@ -1,0 +1,24 @@
+manage_jobs:
+    path:     /manage
+    defaults: { _controller: JobBundle:Job:manageJobs }
+
+
+post_job:
+    path:     /post
+    defaults: { _controller: JobBundle:Job:postJob }
+
+
+edit_job:
+    path:     /editJob/{id}
+    defaults: { _controller: JobBundle:Job:editJob }
+
+delete_job:
+    path:     /deleteJob/{id}
+    defaults: { _controller: JobBundle:Job:deleteJob }
+
+job_search:
+    path:     /search
+    defaults: { _controller: JobBundle:Job:searchCategoryDQL }
+
+
+

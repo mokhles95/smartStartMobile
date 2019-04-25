@@ -1,0 +1,61 @@
+bid_api:
+    resource: "@BidApiBundle/Resources/config/routing.yml"
+    prefix:   /api
+
+blog:
+    resource: "@BlogBundle/Resources/config/routing.yml"
+    prefix:   /
+
+dashboard:
+    resource: "@DashboardBundle/Resources/config/routing.yml"
+    prefix:   /dashboard
+
+bookmark:
+    resource: "@BookmarkBundle/Resources/config/routing.yml"
+    prefix:   /
+
+job:
+    resource: "@JobBundle/Resources/config/routing.yml"
+    prefix:   /job
+
+note:
+    resource: "@NoteBundle/Resources/config/routing.yml"
+    prefix:   /note
+
+bid:
+    resource: "@BidBundle/Resources/config/routing.yml"
+    prefix:   /bid
+
+review:
+    resource: "@ReviewBundle/Resources/config/routing.yml"
+    prefix:   /review
+
+project:
+    resource: "@ProjectBundle/Resources/config/routing.yml"
+    prefix:   /task
+
+user:
+    resource: "@UserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+homepage:
+    resource: "@FrontBundle/Resources/config/routing.yml"
+    prefix:   /
+
+logout:
+    path: /logout
+
+offer:
+    resource: "@OfferBundle/Resources/config/routing.yml"
+    prefix:   /offer
+
+mgilet_notification:
+    resource: "@MgiletNotificationBundle/Controller/"
+    prefix: /notifications
+
+portfolio:
+    resource: "@PortfolioBundle/Resources/config/routing.yml"
+    prefix:   /portfolio
+
+
+
